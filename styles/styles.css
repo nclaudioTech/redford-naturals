@@ -1,0 +1,180 @@
+* {
+/*    padding: 0;*/
+    margin: 0;
+    font-family: Arial;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #272d2a;
+}
+
+/**************Nav Bar CSS*******************/
+
+.nav_bar {
+    width: 75%;
+    float: right;
+    list-style: none;
+}
+
+.nav_bar ul li {
+    font-weight: bold;
+    background-color: #262626;
+    width: 170px;
+    border: 1px solid #fff;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    float: left;
+    line-height: 50px;
+    list-style: none;
+}
+
+.nav_bar li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.nav_bar ul li ul li {
+  display: none;
+  font-size: .5em;
+}
+
+.nav_bar li:hover {
+  background-color: indianred;
+  transition: background-color .3s;
+}
+
+.nav_bar ul li ul {
+    padding: 0;
+}
+
+.nav_bar > ul {
+    margin-top: 20px;
+}
+
+.nav_bar ul li.current {
+    background-color: indianred;
+}
+
+.nav_bar ul li ul li {
+    font-size: 16px;
+}
+
+.nav_bar ul li:hover ul li {
+  display: block;
+}
+
+
+.slicknav_menu {
+    display: none;
+}
+
+/**********Hero Image CSS**************/
+
+.hero-image {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    background: url(../images/redford-hero.jpg) no-repeat center;
+    background-size: cover;
+    border-bottom: 2px solid indianred;
+    width: 100%;
+}
+
+section img {
+    margin-right: 10px;
+}
+
+/**************Main CSS*******************/
+
+main img {
+    padding-right: 50px;
+}
+
+section {
+    width: 75%;
+    margin: 1em auto;
+}
+
+h2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 4em;
+    color: #fff;
+}
+
+#cat-selection {
+    border-top: 2px solid indianred;
+    margin-top: 5em;
+}
+
+footer {
+    width: 100%;
+    float: left;
+    border-top: 2px solid indianred;
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+footer p {
+    color: #fff;
+    width: 50%;
+}
+
+/*******************Bottom Nav***************/
+
+footer nav ul li {
+    float: left;
+    padding-right: 10px;
+}
+
+footer nav ul {
+    float: right;
+    text-decoration: none;
+    list-style: none;
+    display: block;
+}
+
+
+@media only screen and (max-width: 550px) {
+    .slicknav_menu {
+        display: block;
+        width: 100%;
+        float: right;
+        background: transparent;
+    }
+    .slicknav_menu li {
+        background: #333;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .slicknav_menu a:hover {
+        background: transparent;
+        color: #fff;
+    }
+    .nav_bar {
+        display: none;
+    }
+
+    .hero-image {
+        position: relative;
+        height: 100%;
+        width: 100%;        
+        overflow: hidden;
+        background: url(../images/redford-hero.jpg) no-repeat center;
+        background-size: cover;
+        border-bottom: 2px solid indianred;
+
+    }
+    
+    h2 {
+        clear: both;
+    }
+}

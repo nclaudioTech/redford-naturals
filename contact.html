@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="description" content="Example contact form">
+    <meta name="keywords" content="VICOM-128, HTML Contact Form">
+	<title>Contact Form</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/contact.css">
+	<link rel="stylesheet" href="styles/slicknav.css">
+</head>
+	
+<body>
+    <header>
+       <div class="container">
+           <div class="hero-image" id="dry">
+               <nav class="nav_bar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Dog</a>
+                    <ul>
+                        <li><a href="drydog.html">Dry</a></li>
+                        <li><a href="wetdog.html">Wet</a></li>
+                        <li><a href="dogtreats.html">Treats</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="lastItem">Cat</a>
+                    <ul>
+                        <li><a href="drycat.html">Dry</a></li>
+                        <li><a href="wetcat.html">Wet</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="current">Contact</a></li>
+            </ul>
+                </nav>
+           </div>
+       </div>
+    </header>
+	<h1>Contact Us</h1>    
+    <section id="form">
+
+	<form action="sendmail.php" method="post" name="contact_form" id="contact_form">
+		<fieldset>
+        	<legend>Contact Information</legend>
+<!--            <label for="first_name">First Name:</label>-->
+			<input type="text" name="first_name" class="contact-info" id="first_name" placeholder="First Name" required><br>
+<!--			<label for="last_name">Last Name:</label>-->
+			<input type="text" name="last_name" class="contact-info" id="last_name" placeholder="Last Name" required><br>
+<!--        	<label for="email">Email Address:</label>-->
+        	<input type="email" name="email" class="contact-info" id="email" placeholder="Email Address" required><br>
+<!--        	<label for="verify">Verify Email:</label>-->
+        	<input type="email" name="verify" class="contact-info" id="verify" placeholder="Verify Email" required autocomplete="off"><br>
+<!--			<label for="phone">Phone Number:</label>-->
+			<input type="tel" name="phone" class="contact-info" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="999-999-9999" required><br>
+		</fieldset>
+		<fieldset>
+    		<legend>Message Information</legend>
+			<label for="reservation_date">Date:</label>
+			<input type="date" name="reservation_date" id="today_date" required><br>
+			<label for="subject">Subject:</label>         
+            <select name="subject" id="subject">
+                <option value="Product">Product Question</option>
+                <option value="Distribution">Distribution/Wholesale</option>
+                <option value="Safety">Safety Protocol / Recall</option>
+            </select><br>
+<!--			<label for="message">Message:</label>-->
+			<textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+		</fieldset>
+<!--		<fieldset id="buttons">-->
+<!--			<legend>Submit Your Email Message</legend>-->
+			<label>&nbsp;</label>
+			<input type="submit" id="submit" value="Send Email">
+			<input type="reset" id="reset" value="Reset"><br>
+<!--		</fieldset>-->
+	</form>        
+    </section>
+    <footer>
+        <p>&copy; 2020 | Site by Nicholas Claudio | WEBDEV - 114</p>
+        <nav>
+            <ul>
+                <li>
+                   <a href="https://www.facebook.com/pspgreenfield/"><img src="images/facebook-logo.png" alt="" height="25" width="25"></a>
+                </li>                
+                <li>
+                   <a href="https://twitter.com/petsuppliesplus?lang=en"><img src="images/twitter-logo.png" alt="" height="25" width="25"></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/petsuppliesplus/?hl=en"><img src="images/instagram-logo.png" alt="" height="25" width="25"></a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jquery.slicknav.js"></script>
+    <script>
+        $('.nav_bar').slicknav();
+    </script>        
+</body>
+</html>
